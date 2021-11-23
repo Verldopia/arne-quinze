@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'moderatlight';
-    src: url('moderat-light-webfont.woff2') format('woff2'),
-    url('moderat-light-webfont.woff') format('woff');
+    src: url('font/moderat-light-webfont.woff2') format('woff2'),
+    url('font/moderat-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'moderatregular';
-    src: url('moderat-regular-webfont.woff2') format('woff2'),
-    url('moderat-regular-webfont.woff') format('woff');
+    src: url('font/moderat-regular-webfont.woff2') format('woff2'),
+    url('font/moderat-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -19,6 +19,9 @@
 body {
     font-family: "moderatregular", Arial, Helvetica, sans-serif;
 }
+h3 {
+    padding: 1rem 0;
+}
 p,
 h2,
 h1 {
@@ -28,11 +31,14 @@ h1 {
 a {
     color: #000000;
 }
-a:hover {
+a:hover,
+.a-art {
     color: blue;
+    text-decoration: underline;
 }
-.a-arne:hover {
-    color: black;
+.a-art {
+    text-decoration: none;
+    
 }
 
 /* Header */
@@ -54,11 +60,21 @@ header a {
     list-style: none;
     padding: 0;
 }
+.main-logo {
+    height: 5rem;
+    width: 5rem;
+    background-image: url(../img/afbeeldingen/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.a-arne:hover {
+    color: black;
+}
 
 /* Main */
 
 main {
-    margin: 0 2rem;
+    margin: 0 1rem;
 }
 .main-logo {
     align-self: center;
@@ -67,21 +83,57 @@ main {
 .main-container {
     width: 100%;
     max-width: 50rem;
-    margin: 5rem auto;
+    margin: 2rem auto 5rem;
+}
+.large-main-img {
+    margin: 2rem 0 5rem;
+    width: 100%;
+    float: left;
+}
+.large-main-text,
+.large-main a {
+    margin-right: 5rem;
+    text-decoration: none;
+    font-family: "moderatlight", Arial, Helvetica, sans-serif;
+}
+.large-main a {
+    display: block;
+    margin-top: 2rem;
+    font-family: "moderatregular", Arial, Helvetica, sans-serif;
+}
+.large-main-text h2 {
+    padding: 2rem 0;
+}
+.large-main-text p,
+.large-main-text blockquote {
+    display: inline;
 }
 .main-p {
     margin: 1rem 0;
+}
+.container-highlight {
+    margin-bottom: 3rem;
+}
+.container-highlight a {
+    line-height: 3rem;
+}
+.img-highlight {
+    width: 100%;
+    margin: 2rem 0 1rem;
+}
+.tags-grey {
+    color: #777777;
 }
 
 /* Button to top */
 
 .container-btn-totop {
     background-color: white;
-    box-shadow: 0 0 1.5rem 3rem #FFFFFF;
+    box-shadow: 0 0 0.5rem 1rem #FFFFFF;
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: 3rem;
+    height: 2rem;
 }
 .btn-totop {
     text-decoration: none;
@@ -93,6 +145,7 @@ main {
     border-bottom: 1px solid rgb(0, 0, 0);
 }
 .btn-totop:hover {
+    text-decoration: none;
     border-bottom: 1px solid blue;
 }
 
@@ -120,11 +173,10 @@ main {
 .logo-social {
     justify-content: center;
     width: 1.5rem;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.3rem;     
 }
 .footer-info {
-    padding: 4rem 2rem 0;
-    margin-bottom: 5rem;
+    padding: 4rem 2rem 1rem;
     background-color: #e6e6e6;
 }
 .container-footer {
@@ -132,10 +184,12 @@ main {
     max-width: 50rem;
     margin: 0 auto;
 }
+.h2-footer {
+    margin-bottom: 2rem;
+}
 .email {
     background-color: #e6e6e6;
     border: 1px solid grey;
-    margin: 1rem 0;
     line-height: 2rem;
     width: 100%;
     max-width: 20rem;
@@ -155,6 +209,9 @@ main {
 .footer-copyright p a:hover {
     text-decoration: underline;
 }
+.p-footer {
+    text-align: end;
+}
 
 @media (min-width: 45rem) {
     .footer-soc {
@@ -167,4 +224,46 @@ main {
         padding: 0 2rem;
         justify-content: space-between;
     }
-  }
+    .img-highlight {
+        display: block;
+    }
+    .highlights {
+        display: flex;
+        flex-direction: row;
+        max-width: 65rem;
+        margin: 0 auto;
+        padding-left: 4rem;
+    }
+    .container-highlight {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        margin-left: 1rem;
+    }
+    .ateliers,
+    .highlight {
+        position: relative;
+    }
+    .btn-art {
+      width: 10rem;
+      transform: rotate(-90deg);
+      position: absolute;
+      margin-left: -3rem;
+      top: 10rem;
+      text-align: center;
+    }
+}
+@media (min-width: 55rem) {
+    .large-main-img {
+        width: 60%;
+        margin-right: 2rem;
+    }
+/*     .large-main-text {
+        max-width: 15rem;
+    } */
+}
+@media (min-width: 80rem) {
+    .highlights {
+      padding-left: 0;
+    }
+}

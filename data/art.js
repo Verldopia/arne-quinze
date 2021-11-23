@@ -71,11 +71,11 @@ const ARTS = [
     {
         title: "Albizia",
         subtitle: "a Wildflower Fields painting",
-        description: null,
+        description: "The creation of a Albizia sculpture whose final destination is Brazil. The artist seeks the right...",
         location: "Atelier, Sint-Martens-Latem, Belgium",
         tags: ["Painting"],
         year: "2021",
-        cover: null,
+        cover: "32f682d6915a8cafe6505520fe07b9cd.jpg",
         images: [
             "66e7af19f2010813128cf6474d7fc014.jpg",
             "65644e1254f0a32cd0b703afd31ac57d.jpg",
@@ -150,11 +150,11 @@ const ARTS = [
     {
         title: "Tuecrium",
         subtitle: "a Wildflower Fields painting",
-        description: null,
+        description: "A look behind the scenes in Arne Quinze's atelier.",
         location: "Atelier, Sint-Martens-Latem, Belgium",
         tags: ["Painting"],
         year: "2021",
-        cover: null,
+        cover: "346a5f7a0097796c9bf01b3f1b4970e1.jpg",
         images: [
             "831b2499ab2b82a4c97f3ed5870a92b8.jpg",
             "a798bc682803d673b1cf39644a91ccd9.jpg",
@@ -164,12 +164,12 @@ const ARTS = [
     },
     {
         title: "Thelypteris",
-        subtitle: "",
-        description: null,
+        subtitle: "Thelypteris",
+        description: "The Passenger, a public installation by Arne Quinze in the city centre of Mons, has reached his...",
         location: "Atelier, Sint-Martens-Latem, Belgium",
         tags: ["Painting"],
         year: "2021",
-        cover: null,
+        cover: "88cef705c4b2021648f45aaef1fe48bf.jpg",
         images: [
             "52f94776bf0b6b26b4ba8acc402afb85.jpg",
             "a40d071c5c303aa9014209220a86d633.jpg",
@@ -251,11 +251,11 @@ const ARTS = [
     {
         title: "My Secret Garden",
         subtitle: "overview exhibition",
-        description: null,
+        description: "We are very delighted to invite you all to the first major overview exhibition of Arne Quinze in...",
         location: "Beaux-Arts Museum, Mons",
         tags: ["Exhibition"],
         year: "2021",
-        cover: null,
+        cover: "74f576137165a77bb849af465f0cdb7b.jpg",
         images: [
             "e79bd21712837f1112a9fa331175a033.jpg",
             "d16300db0cade18adf97a45db9457a7c.jpg",
@@ -397,11 +397,11 @@ const ARTS = [
         title: "Lupine Aberrans sculpture",
         subtitle:
             "The installation of a large Lupine sculpture in a private garden",
-        description: null,
+        description: "Arne Quinze has created a new permanent sculpture in a private garden in Antwerp, Belgium. Arne...",
         location: "Private garden, Wilrijk, Belgium",
         tags: ["Sculpture"],
         year: "2021",
-        cover: null,
+        cover: "ff5902a5db1f56c4d2e70e58ea570a86.jpeg",
         images: [
             "64218b5f4cf1406995a65a1bbc412d9d.jpeg",
             "89b3e3b69077ff79ef5c6e95d1e508d0.jpg"
@@ -444,11 +444,11 @@ const ARTS = [
     {
         title: "Mysotis Sylvatica",
         subtitle: "a Wildflower Fields painting",
-        description: null,
+        description: "For Arne Quinze, painting is an extraordinary confrontation with himself. Each work is a tabula...",
         location: "Atelier, Sint-Martens-Latem, Belgium",
         tags: ["Painting"],
         year: "2021",
-        cover: null,
+        cover: "8192f74495bf030e1e30331c885f3a65.jpg",
         images: ["addf919195bf9580969e510299c9c169.jpg"],
         highlight: true
     },
