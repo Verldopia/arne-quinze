@@ -1,17 +1,14 @@
 (() => {
     const app = {
         init () {
-          console.log('1. Application initialized!');
           this.cacheElements();
           this.generateUI();
         },
         cacheElements () {
-          console.log('2. Cache DOM elements!');
           this.$highlights = document.querySelector('.highlights');
           this.$atelier = document.querySelector('.atelier');
         },
         generateUI () {
-          console.log('3. Generate highlights on homepage!');
           this.$highlights.innerHTML = this.generateHighlights(ARTS);
           this.$atelier.innerHTML = this.generateAtelier(ARTS);
         },
