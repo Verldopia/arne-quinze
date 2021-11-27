@@ -25,7 +25,7 @@
                     <a href="press/index.html">Press</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a class="a-art" href="contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -35,6 +35,70 @@
     
     <main>
         <div class="main-container">
+            <div class="container-text-smaller">
+                <h1 class="h1-margin">Get in touch</h1>
+                <p>Maruani Mercier Gallery is our official partner and will handle all questions regarding paintings and smaller sculptures. For bigger sculptures and public installations, please contact the atelier.</p>
+            </div>
+
+            <div class="highlights highlights-contact">
+                <div class="box-contact">
+                    <h2>Contact our gallery:</h2>
+                    <address class="box-contact--p">Maruani Mercier Gallery<br>Avenue Louise 430<br>1050 Bruxelles, Belgium</address>
+                    <div class="box-contact--p">
+                        <a href="https://www.maruanimercier.com" target="_blank">www.maruanimercier.com</a>
+                        <a href="mailto:test@test.eu">laurent@maruanimercier.com</a>
+                        <p class="box-contact--p">+ 32 (0) 2 512 50 10</p>
+                        <p class="time-belgium--1"></p>
+                    </div>
+                </div>
+                <div class="box-contact">
+                    <h2>Contact our atelier/studio/press departments:</h2>
+                    <div class="box-contact--p">
+                        <a href="mailto:test@test.eu">info@arnequinze.com</a>
+                        <p>Please mention in your subject <em>Atelier, Studio or Press</em></p>
+                        <p><em>Atelier</em> for general enquiries & sales artworks</p>
+                        <p><em>Studio</em> for photo & video content</p>
+                        <p><em>Press</em> for interviews</p>
+                        <p>or +32 494 544 620 on weekdays between 9AM and 5PM</p>
+                        <address class="box-contact--p">Arne Quinze<br>Hooglatemweg 18<br>9830 Sint-Martens-Latem, Belgium</address>
+                        <p>We look forward hearing from you!</p>
+                        <p class="time-belgium--2"></p>
+                    </div>
+                </div>
+                <div class="box-contact">
+                    <h2>Send us your question.</h2>
+                    <form action="" method="get" class="form-example">
+                        <div class="box-contact--item">
+                            <label for="contact-select">About what would you like to contact me?*</label>
+                            <select class="contact-input" name="user_select" id="contact-select" required="required">
+                                <option value="">--Please choose an option--</option>
+                                <option value="option_1">Question about a public work</option>
+                                <option value="option_2">Purchase a work</option>
+                                <option value="option_3">Other</option>
+                            </select>
+                        </div>
+                        <div class="box-contact--item">
+                            <label for="email">E-mail*</label>
+                            <input class="contact-input" type="email" name="user_email" required="required" placeholder="E-mail">
+                        </div>
+                        <div class="box-contact--item">
+                            <label for="message">Message*</label>
+                            <textarea class="contact-input" id="message" name="user_msg" rows="5" cols="33" placeholder="Your message" minlength="15" required="required"></textarea>
+                        </div>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="contact-data" name="contact-data" required="required">
+                                <label for="contact-data" >I agree that my data will be used to respond to the inquiry*</label>
+                            </li> 
+                            <li>
+                                <input type="checkbox" id="contact-subscribe" name="contact-subscribe">
+                                <label for="contact-subscribe">I would like to subscribe to the newsletter</label>
+                            </li>
+                        </ul>
+                        <input class="submit" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -97,7 +161,6 @@
         </div>
     </footer>
 
-    <script src="data/art.js"></script>
-    <script src="static/js/app.js"></script>
+    <script src="static/js/time-belgium.js"></script>
 </body>
 </html>

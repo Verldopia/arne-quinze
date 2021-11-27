@@ -22,10 +22,15 @@ body {
 h2,
 h1,
 h3 {
-    font-family: "moderatlight", Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    font-family: "moderatregular", Arial, Helvetica, sans-serif;
     margin: 1rem 0;
+    font-weight: bold;
     font-size: 2rem;
+}
+h2,
+h3 {
+    
+    font-size: 1.5rem;
 }
 p,
 blockquote,
@@ -44,10 +49,9 @@ a {
 }
 a:hover,
 .a-art {
-    color: blue;
+    color: #003cff;
     text-decoration: underline;
 }
-.a-art,
 .a-back {
     text-decoration: none;
 }
@@ -56,7 +60,7 @@ a:hover,
     text-align: right;
 }
 .a-art--black ,
-footer label {
+label {
     color: black;
     font-size: 1.2rem;
     font-family: "moderatlight", Arial, Helvetica, sans-serif;
@@ -67,10 +71,15 @@ footer label {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 2rem;
     width: 100%;
     max-width: 58rem;
     margin: 0 auto 5rem;
+}
+@media (min-width: 65rem) {
+    header {
+        padding: 2.5rem 0;
+    }
 }
 header a {
     text-decoration: none;
@@ -96,10 +105,14 @@ header a {
 /* Main */
 
 main {
-    margin: 0 1rem;
+    margin: 0 2rem;
 }
 .highlights {
-    gap: 2rem;
+    gap: 3rem;
+}
+.main-container .highlights-contact {
+    padding: 0;
+    gap: 5rem;
 }
 .main-container {
     width: 100%;
@@ -110,6 +123,12 @@ main {
     margin: 2rem 0 5rem;
     width: 100%;
     float: left;
+}
+@media (min-width: 55rem) {
+    .large-main-img {
+        width: 60%;
+        margin-right: 2rem;
+    }
 }
 .large-main-text,
 .large-main a {
@@ -122,6 +141,7 @@ main {
     margin-top: 2rem;
     font-family: "moderatregular", Arial, Helvetica, sans-serif;
 }
+
 .large-main-text h2 {
     padding: 2rem 0;
 }
@@ -146,11 +166,13 @@ main {
 .p-date {
     color: #777777;
     font-size: 1.2rem;
+    font-weight: normal;
 }
 .h1-margin {
     width: 100%;
     max-width: 58rem;
     margin: 1rem auto;
+    font-family: "moderatregular", Arial, Helvetica, sans-serif;
 }
 .bold {
     font-weight: bold;
@@ -186,6 +208,73 @@ main {
     position: relative;
     width: calc(100vw - 0.51rem);
     left: calc(50% - 50vw);
+}
+
+/* Contact-form */
+
+
+.contact-input {
+    height: 2.5rem;
+    width: 100%;
+    resize: vertical;
+    padding-left: 0.5rem;
+}
+.contact-input {
+    border: 1px solid #e6e6e6;
+}
+.contact-input:invalid {
+    color: #777777;
+}
+.contact-input:valid {
+    border: 2px solid rgb(18, 219, 0);
+}
+
+.box-contact--item textarea {
+    font-family: "moderatlight", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    height: 6rem;
+}
+form ul {
+    padding: 1rem 0;
+    list-style: none;
+}
+form ul li {
+    padding: 1rem 0;
+}
+.submit {
+    height: 2rem;
+    width: 6rem;
+    border: none;
+    color: #FFFFFF;
+    background-color: #003cff;
+    transition: ease 0.3s all;
+}
+.submit:hover {
+    background-color: #002fc9;
+    cursor: pointer;
+}
+.box-contact,
+.box-contact p,
+.box-contact--p,
+.box-contact--p a {
+    font-size: 1.2rem;
+    font-style: normal;
+    line-height: 1.8rem;
+    padding: 1rem 0;
+}
+.box-contact a {
+    font-weight: bold;
+    text-decoration: none;
+}
+.box-contact--p {
+    color: #777777;
+}
+.box-contact a:hover {
+    text-decoration: underline;
+}
+label {
+    color: #777777;
 }
 
 /* Button to top */
@@ -245,6 +334,9 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.box-images a {
+    font-size: 1rem;
+}
 .box-image--small {
     display: flex;
     flex-direction: column;
@@ -257,6 +349,20 @@ main {
 .box-image--small img {
     padding: 0.5rem 0;
     width: 80%;
+}
+.list-articles {
+    position: relative;
+    max-width: 58rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.btn-press {
+    top: 10rem;
+    left: -4rem;
+}
+.btn-press div {
+    padding: 0;
 }
 
 /* Footer */
@@ -300,7 +406,7 @@ main {
 .email,
 .email-submit {
     background-color: #e6e6e6;
-    border: 1px solid grey;
+    border: 1px solid #777777;
     line-height: 2rem;
     width: 100%;
     max-width: 15rem;
@@ -316,9 +422,9 @@ main {
 }
 .footer-row {
     padding: 7rem 0 2rem;
-    display: flex;
+/*     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     max-width: 58rem;
     margin: 0 auto;
 }
@@ -369,7 +475,6 @@ main {
     .footer-row a,
     .footer-row h2 {
         padding: 0 2rem;
-        font-size: 1.5rem;
         width: 15rem;
     }
     .footer-row a {
@@ -405,12 +510,6 @@ main {
         flex-direction: column;
         flex-grow: 2;
     }
-    .list-articles {
-        max-width: 61rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
     .container-articles {
         width: 15rem;
     }
@@ -422,13 +521,8 @@ main {
       width: 12rem;
       transform: rotate(-90deg);
       position: absolute;
-      margin-left: -4rem;
       top: 10rem;
       text-align: center;
-    }
-    .btn-press {
-        top: 35rem;
-        left: 1rem;
     }
     .container-text-smaller {
         max-width: 100%;
@@ -443,17 +537,15 @@ main {
         width: 15rem;
     }
 }
-@media (min-width: 55rem) {
-    header {
-        padding: 2.5rem 0;
-    }
-    .large-main-img {
-        width: 60%;
-        margin-right: 2rem;
-    }
-}
+
 @media (min-width: 80rem) {
     .highlights {
       padding-left: 0;
+    }
+    .btn-art {
+        left: -10rem;
+    }
+    .btn-main {
+        left: -4rem;
     }
 }
