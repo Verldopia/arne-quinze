@@ -14,7 +14,7 @@
           return atelier.map((ate) => {
             return `
             <div class="container-highlight container-articles">
-                <img class="img-highlight" src="static/img/afbeeldingen/${ate.cover}" alt="${ate.title}"></img>
+                <img src="static/img/afbeeldingen/${ate.cover}" alt="${ate.title}">
                 <h3 class="tags-grey">${ate.subtitle}</h3>
                 <h2>${ate.title}</h2>
                 <p>${ate.description}</p>

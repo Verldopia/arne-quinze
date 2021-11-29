@@ -92,23 +92,38 @@ header a {
     padding: 0;
 }
 .main-logo {
-    width: 7rem;
+    width: 15rem;
+    height: 5rem;
     max-width: 100%;
-    background-image: url(../img/afbeeldingen/logo.png);
+    background-image: url(../img/afbeeldingen/logo.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    align-self: center;
 }
 .a-arne:hover {
     color: black;
 }
 
-/* Main */
+/* Art & Exhibitions */
+
+.projects {
+    width: 20rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* Other pages */
 
 main {
     margin: 0 2rem;
 }
 .highlights {
     gap: 3rem;
+    position: relative;
 }
 .main-container .highlights-contact {
     padding: 0;
@@ -357,12 +372,61 @@ label {
     flex-wrap: wrap;
     gap: 3rem;
 }
+.large-img {
+    width: 85vw;
+}
+.container-center {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.biography {
+    width: 58rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.biography img {
+    padding-top: 3rem;
+    max-width: 100%;
+}
+.biography .tags-grey {
+    text-align: right;
+}
+.biography h1,
+.biography h2 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+.p-center,
+.blockquote-block {
+    padding-top: 3rem;
+    text-align: center;
+}
+.blockquote-block blockquote {
+    font-size: 2rem;
+}
 .btn-press {
     top: 10rem;
     left: -4rem;
 }
 .btn-press div {
     padding: 0;
+}
+
+.filter-category,
+.filter-year {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.filter-category {
+    padding: 0;
+    list-style: none;
+}
+iframe {
+    padding: 4rem 0;
+    width: 100%;
 }
 
 /* Footer */
@@ -422,9 +486,9 @@ label {
 }
 .footer-row {
     padding: 7rem 0 2rem;
-/*     display: flex;
+     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
     max-width: 58rem;
     margin: 0 auto;
 }
@@ -441,6 +505,7 @@ label {
 .footer-row a {
     text-align: right;
     flex-grow: 10;
+    text-decoration: none;
 }
 .footer-row img {
     flex-grow: 5;
@@ -537,7 +602,37 @@ label {
         width: 15rem;
     }
 }
-
+@media (min-width: 60rem) {
+    .img-float {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+    .img-float img {
+        padding: 2rem 0;
+        max-width: 100%;
+        width: 25rem;
+        order: 2;
+        height: min-content;
+        align-self: center;
+    }
+    .img-float p {
+        align-self: center;
+        padding: 2rem 0;
+    }
+    .img-float .img-float--1 {
+        width: 20rem;
+        max-width: 100%;
+    }
+    .img-float .img-float--2 {
+        width: 35rem;
+        max-width: 100%;
+        align-self: center;
+    }
+    .img-float--v2 img {
+        order: 0;
+    }
+}
 @media (min-width: 80rem) {
     .highlights {
       padding-left: 0;
