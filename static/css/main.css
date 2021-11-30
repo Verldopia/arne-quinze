@@ -419,9 +419,6 @@ label {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
-}
-.filter-category {
-    padding: 0;
     list-style: none;
 }
 iframe {
@@ -453,7 +450,7 @@ iframe {
 .logo-social {
     justify-content: center;
     width: 1.5rem;
-    padding-bottom: 0.3rem;     
+    padding-bottom: 0.3rem;
 }
 .footer-info {
     padding: 4rem 2rem 1rem;
