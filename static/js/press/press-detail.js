@@ -16,11 +16,11 @@
             return `
             <div class="box-image--small">
               <img class="imgs-press" src="static/img/afbeeldingen/${pre.cover}" alt="download-img">
-              <a href="press/#">download image</a>
+              <a href="press/index.html">download image</a>
             </div>
             <div class="box-image--small">
             <img class="imgs-press" src="static/img/afbeeldingen/${pre.images[i]}" alt="download-img">
-            <a href="press/#">download image</a>
+            <a href="press/index.html">download image</a>
             </div>`
           }
         }).join(' ')

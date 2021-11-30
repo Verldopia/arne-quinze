@@ -8,25 +8,21 @@
       },
       cacheElements () {
         this.$arts = document.querySelector('.projects');
-        this.$filterYears = document.querySelector('.is-filter')
         this.$filterAll = document.querySelector('.projects');
         this.$categoryItems = document.querySelectorAll(".is-filter");
       },
       generateUI () {
         this.$arts.innerHTML = this.generateListOfArts(ARTS);
-        this.$filterYears.innerHTML += this.generateHTMLForYears(ARTS);
         this.$filterAll.innerHTML = this.generateListOfArts(ARTS);
         this.generateFilterForAll();
       },
-      
-      
       generateListOfArts (highlights) {
             return highlights.map((head) => {
               for (let i = 0; i < head.images.length; i++) {
               return `
                 <article class="box-articles">
-                  <a href="art-and-exhibitions/detail/#">${head.title}</a>
-                  <div class="tags-grey">${head.tags} - ${head.location}</div>
+                  <a href="art-and-exhibitions/detail/index.html">${head.title}</a>
+                  <div class="tags-grey">${head.tags} ${head.location === null ? head.location = "" : head.location}</div>
                   <div class="box-images">
                     <img src="static/img/afbeeldingen/${head.images[i]}" loading="lazy" alt="${head.subtitle}">
                   </div>
@@ -34,20 +30,12 @@
               }
           }).join(' ');
       },
-      generateHTMLForYears (highlights) {
-        highlights.find((year) => {
-          return `
-            <ul class="filter-year">
-              <li><button class="is-filter" data-category="${year.year}">${year.year}</li></button>
-            </ul>`
-        })
-      },
       generateFilterForAll () {
           for (const $filter of this.$categoryItems) {
             $filter.addEventListener('click',() => {
               const category = $filter.dataset.category;
               this.filterCategory = category;
-              // this.filterYears = category;
+              this.filterYears = category;
               this.generateFilteredCategory();
             }, false);
           }

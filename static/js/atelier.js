@@ -18,7 +18,7 @@
                 <h3 class="tags-grey">${ate.subtitle}</h3>
                 <h2>${ate.title}</h2>
                 <p>${ate.description}</p>
-                <a href="atelier-studio/detail/#">Learn more</a>
+                <a href="atelier-studio/detail/index.html">Learn more</a>
             </div>`
           }).join(' ')
         }

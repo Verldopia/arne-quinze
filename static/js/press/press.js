@@ -18,7 +18,7 @@
                 <h3 class="tags-grey">${pre.subtitle}</h3>
                 <h2>${pre.title} - ${pre.location}</h2>
                 <p>${pre.description}</p>
-                <a href="press/detail/#">Open press release</a>
+                <a href="press/detail/index.html">Open press release</a>
             </div>`
           }).join(' ')
         }
