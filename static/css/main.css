@@ -15,6 +15,10 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+#top {
+    scroll-behavior: smooth;
 }
 body {
     font-family: "moderatregular", Arial, Helvetica, sans-serif;
@@ -108,16 +112,84 @@ header a {
 
 /* Art & Exhibitions */
 
+.page-filter,
 .projects {
-    width: 20rem;
-    max-width: 100%;
+    max-width: 58rem;
+    width: 100%;
     margin: 0 auto;
 }
-
-
-
-
-
+.page-filter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.page-filter button {
+    font-size: 1.2rem;
+    border: none;
+    background-color: #FFFFFF;
+}
+.page-filter button:hover {
+    color: #003cff;
+    cursor: pointer;
+}
+.filter-category,
+.filter-year {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+    list-style: none;
+}
+.filter-view {
+    text-align: right;
+}
+.filter-view a {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+.filter-year button {
+    font-size: 1rem;
+}
+.is-filter {
+    padding: 0;
+}
+.box-article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin: 2rem 0;
+}
+.box-article--year {
+    margin: 0;
+}
+.box-text {
+    text-align: right;
+}
+.box-text h3 {
+    font-size: 1.2rem;
+    font-family: "moderatlight", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.box-text h2 {
+    font-size: 1.5rem;
+}
+@media (min-width: 30rem) {
+    .box-text {
+        width: 30%;
+    }
+    .filter-category,
+    .filter-year {
+        max-width: 60%;
+    }
+}
+.box-images--art {
+    display: flex;
+    align-self: center;
+    height: fit-content;
+}
 /* Other pages */
 
 main {
@@ -350,8 +422,14 @@ label {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.box-images a {
-    font-size: 1rem;
+.box-text a {
+    text-decoration: none;
+}
+.box-text a:hover {
+    text-decoration: underline;
+}
+.is-filter--show {
+    text-decoration: underline;
 }
 .box-image--small {
     display: flex;
@@ -412,15 +490,6 @@ label {
 }
 .btn-press div {
     padding: 0;
-}
-
-.filter-category,
-.filter-year {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style: none;
 }
 iframe {
     padding: 4rem 0;
