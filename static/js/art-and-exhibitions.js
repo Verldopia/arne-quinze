@@ -18,7 +18,6 @@
       },
       generateListOfArts (highlights) {
         return highlights.map((head) => {
-          for (let i = 0; i < head.images.length; i++) {
           return `
             <article class="box-article">
               <div class="box-text">
@@ -28,10 +27,9 @@
                 <p class="tags-grey">${head.tags} ${head.location === null ? head.location = "" : head.location}</p>
               </div>
               <div class="box-images--art">
-                <img src="static/img/afbeeldingen/${head.images[i]}" loading="lazy" alt="${head.subtitle}">
+                <img src="static/img/afbeeldingen/${head.images[0]}" loading="lazy" alt="${head.subtitle}">
               </div>
             </article>`
-          }
         }).join('');
       },
       generateFilterForAll () {
