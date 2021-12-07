@@ -40,13 +40,11 @@
       this.$filterOnYears.innerHTML = `<li><button class="is-filter is-filter--show">Show all</button></li>${yearsHTML}`
     },
     generateListOfArts(highlights) {
-
       return highlights.map((head) => {
         const images = head.images;
         const imageHTML = images.map((img) => {
           return `<li><img src="static/img/afbeeldingen/${img}" loading="lazy" alt="${head.subtitle}"></li>`
         }).join('')
-        
         return `
           <article class="box-article">
             <div class="box-text">

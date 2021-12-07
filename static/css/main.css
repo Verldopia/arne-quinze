@@ -179,14 +179,20 @@ header a {
 .box-article {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 5rem;
+    flex-wrap: wrap;
     margin: 2rem 0;
+}
+@media (min-width: 40rem) {
+    .box-article {
+        flex-wrap: nowrap;
+        gap: 5rem;
+    }
 }
 .box-article--year {
     margin: 0;
 }
 .box-text {
+    width: 100%;
     text-align: right;
 }
 .box-text h3 {
@@ -197,7 +203,7 @@ header a {
 .box-text h2 {
     font-size: 1.5rem;
 }
-@media (min-width: 30rem) {
+@media (min-width: 40rem) {
     .box-text {
         width: 30%;
     }
@@ -207,12 +213,12 @@ header a {
     }
 }
 .box-images--art {
+    overflow: scroll;
+    flex-grow: 5;
     display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    max-width: 55%;
-    overflow-x: auto;
-    padding-right: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .box-images--art ul {
     list-style: none;
@@ -222,6 +228,19 @@ header a {
     align-items: center;
     padding-left: 0;
 }
+@media (min-width: 40rem) {
+    .box-images--art {
+    flex-wrap: nowrap;
+    max-width: 55%;
+    overflow-x: auto;
+    padding-right: 1rem;
+    }
+    .filter-category,
+    .filter-years {
+        max-width: 60%;
+    }
+}
+
 *::-webkit-scrollbar {
     width: 1rem;
 }
@@ -236,7 +255,6 @@ header a {
     background-color: #c4c4c4;
     border-radius: 0.2rem;
 }
-    
 
 /* Other pages */
 
@@ -345,6 +363,9 @@ main {
     position: relative;
     width: calc(100vw - 0.51rem);
     left: calc(50% - 50vw);
+}
+.is-selected {
+    color: #003cff;
 }
 
 /* Contact-form */
@@ -608,6 +629,7 @@ iframe {
     cursor: pointer;
 }
 .footer-row {
+    overflow: auto;
     padding: 7rem 0 2rem;
     display: flex;
     flex-direction: row;
@@ -632,7 +654,9 @@ iframe {
     text-decoration: none;
 }
 .footer-row img {
-    flex-grow: 5;
+    align-self: center;
+    max-width: fit-content;
+    
 }
 .footer-copyright {
     display: flex;
@@ -659,7 +683,6 @@ iframe {
     .footer-row {
         flex-direction: row;
         flex-wrap: nowrap;
-        
     }
     .footer-row a,
     .footer-row h2 {
@@ -696,6 +719,7 @@ iframe {
     }
     .container-highlight {
         display: flex;
+        justify-content: center;
         flex-direction: column;
         flex-grow: 2;
     }
@@ -767,9 +791,4 @@ iframe {
     .btn-main {
         left: -4rem;
     }
-}
-
-
-.is-selected {
-    color: red;
 }
