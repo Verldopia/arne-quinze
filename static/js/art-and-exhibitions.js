@@ -22,7 +22,6 @@
       const allCategories = ARTS.map((tag) => tag.tags);
       const uniqueCategories = new Set([...allCategories.flat()]);
       const categoriesHTML = [...uniqueCategories].map((category) => { 
-        console.log(category)
         return `
          <li>
             <button class="is-filter ${category === this.filterCategory ? 'is-selected' : ''}" data-category="${category}">${category}</button>
@@ -33,7 +32,6 @@
     generateFilterYears() {
       const uniqueYears = [...new Set(ARTS.map(year => year.year))];
       const yearsHTML = uniqueYears.map((year) => {
-        console.log(this.filterYears)
         return `
           <li>
             <button class="is-filter ${year === this.filterYears ? 'is-selected' : ''}" data-year="${year}">${year}</button>
@@ -73,6 +71,7 @@
           const year = $filter.dataset.year;
           this.filterCategory = category;
           this.filterYears = year;
+          this.generateUI(this.filterYears);
           this.generateFilteredCategory();
         });
       }
@@ -91,7 +90,6 @@
       this.$showAll = document.querySelectorAll('.is-filter--show');
       for (const $filterAll of this.$showAll) {
         $filterAll.addEventListener('click', () => {
-          console.log('initialized')
           this.$filterAll = document.querySelector('.projects');
           this.$filterAll.innerHTML = this.generateListOfArts(ARTS);
         });
