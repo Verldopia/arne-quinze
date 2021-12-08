@@ -92,6 +92,7 @@
         $filterAll.addEventListener('click', () => {
           this.$filterAll = document.querySelector('.projects');
           this.$filterAll.innerHTML = this.generateListOfArts(ARTS);
+          this.generateIMG();
         });
       }
     },
