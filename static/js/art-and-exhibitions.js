@@ -17,6 +17,7 @@
       this.generateFilterForAll();
       this.$filterAll.innerHTML = this.generateListOfArts(ARTS);
       this.generateShowAll();
+      this.generateIMG();
     },
     generateFilterCategories() {
       const allCategories = ARTS.map((tag) => tag.tags);
@@ -43,7 +44,7 @@
       return highlights.map((head) => {
         const images = head.images;
         const imageHTML = images.map((img) => {
-          return `<li><img src="static/img/afbeeldingen/${img}" loading="lazy" alt="${head.subtitle}"></li>`
+          return `<li><img class="is-img" src="static/img/afbeeldingen/${img}" loading="lazy" alt="${head.subtitle}"></li>`
         }).join('')
         return `
           <article class="box-article">
@@ -71,6 +72,7 @@
           this.filterYears = year;
           this.generateUI(this.filterYears);
           this.generateFilteredCategory();
+          this.generateIMG();
         });
       }
     },
@@ -90,6 +92,28 @@
         $filterAll.addEventListener('click', () => {
           this.$filterAll = document.querySelector('.projects');
           this.$filterAll.innerHTML = this.generateListOfArts(ARTS);
+        });
+      }
+    },
+    generateIMG() {
+      this.$images = document.querySelectorAll('.is-img');
+      const modal = this.$active = document.querySelector('.active');
+      for (const $image of this.$images) {
+        const image = $image.getAttribute("src")
+        $image.addEventListener('click', () => {
+          $image.classList.add('active');
+          $image.classList.remove('is-img');
+          this.$active.style.visibility="visible";
+          this.$active.innerHTML = `
+            <div class="box-img">
+              <img src="${image}">
+            </div>`
+
+          modal.addEventListener('click', () => {
+            this.$active.style.visibility="hidden";
+            $image.classList.remove('active');
+            $image.classList.add('is-img');
+          });
         });
       }
     }

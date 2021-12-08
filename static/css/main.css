@@ -55,12 +55,12 @@ div {
 ul {
     font-family: "moderatlight", Arial, Helvetica, sans-serif;
 }
-.projects img {
+.is-img {
     margin-left: 1rem;
     transition: all ease 0.2s;
     border-radius: 5%;
 }
-.projects img:hover {
+.is-img:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
@@ -160,12 +160,6 @@ header a {
     gap: 0 1rem;
     list-style: none;
 }
-.filter-view {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    text-align: right;
-}
 .filter-view a {
     padding: 0.5rem;
     font-size: 1rem;
@@ -183,6 +177,12 @@ header a {
     margin: 2rem 0;
 }
 @media (min-width: 40rem) {
+    .filter-view {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    }
     .box-article {
         flex-wrap: nowrap;
         gap: 5rem;
@@ -570,6 +570,31 @@ label {
 }
 iframe {
     padding: 4rem 0;
+    width: 100%;
+}
+.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(90, 90, 90, 0.5);
+    position: fixed;
+    top: 0;
+    left: calc(50% - 50vw);
+    visibility: hidden;
+}
+.box-img {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0.5rem 0.5rem 10rem;
+    width: 30rem;
+    max-width: 100%;
+    margin: 0 auto 5rem;
+    padding: 0;
+}
+.box-img img {
+    cursor: pointer;
     width: 100%;
 }
 
