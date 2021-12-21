@@ -98,6 +98,7 @@
     },
     generateIMG() {
       this.$images = document.querySelectorAll('.is-img');
+      console.log(this.$images)
       const modal = this.$active = document.querySelector('.active');
       for (const $image of this.$images) {
         const image = $image.getAttribute("src")
